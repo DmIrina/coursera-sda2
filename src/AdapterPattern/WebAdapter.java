@@ -6,6 +6,8 @@ public class WebAdapter implements WebRequester {
         this.service = currentService;
         /* Connect to the web service */
     }
+
+    @Override
     public int request(Object request) {
         Json result = this.toJson(request);
         Json response = service.request(result);
